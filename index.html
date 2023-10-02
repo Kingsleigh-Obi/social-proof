@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <title>Frontend Mentor | Social proof section</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+    
+      body
+      {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        background: top url(./images/bg-pattern-top-desktop.svg) ;
+        
+      }
+      .container
+      {
+        display: grid;
+        grid-template-columns: 300px 300px 300px;
+        grid-template-rows: repeat(2, 200px);
+        gap: 10px;
+        border:   white;
+        width: 100%;
+        height: 650px;
+        padding-left: 100px;
+        margin-left: 30px;
+        background-image: url(./images/bg-pattern-bottom-desktop.svg);
+        font-family: 'League Spartan', sans-serif;
+      }
+
+      .rate1
+      {
+        margin-left: 20px;
+      }
+      .rate2
+      {
+        margin-left: 20px;
+      }
+      .rate3
+      {
+        margin-left: 20px;
+      }
+
+      .item1
+      {
+        grid-column: span 2;
+      }
+
+      .logo
+      {
+        width: 250px;
+        padding-top: 50px;
+      }
+      
+      .description
+      {
+        width: 350px;
+        font-family: 'League Spartan', sans-serif;
+        color: rgb(155,144,155);
+      }
+
+     
+      
+      .item1 h1
+      {
+        color: hsl(300, 43%, 22%);
+        font-family: 'League Spartan', sans-serif;
+        
+      }
+
+      h1
+      {
+        font-weight: 700;
+        font-size: 40px;
+      }
+      .item2
+      {
+        padding-top: 50px;
+        margin-left: -120px;
+      }
+      .star-rating
+      {
+        height: 30px;
+        width: 350px;
+        margin-top: 10px;
+        padding-top: 5px;
+        border-radius: 10px;
+        background-color: hsl(300, 24%, 96%);
+        color: hsl(300, 43%, 22%);
+        padding-left: 50px;
+        font-family: 'League Spartan', sans-serif;
+        font-weight: 700;
+      }
+
+      /* .star-rating span
+      {
+        margin-left: 20px;
+      } */
+      .review2
+      {
+        margin-left: 50px;
+      }
+      
+      .mini-flex-container
+      {
+        display: flex;
+        
+        
+      }
+
+      .mini-flex-container img
+      {
+        margin-right: 10px;
+        border-radius: 50%;
+        padding-left: 15px;
+      }
+      .review3
+      {
+        margin-left: 100px;
+      }
+
+      .user
+      {
+        margin-top: 100px;
+        background-color:hsl(300, 43%, 22%);
+        height: 200px;
+        color: white;
+        border-radius: 5px;
+        
+        height: 250px;
+      }
+      .attribution {
+        font-size: 11px;
+        margin-left: -300px;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+
+      
+      .mini-flex-container
+      {
+        width: 200px;
+        padding-top: 20px;
+       
+      }
+      .user p
+      {
+        width: 250px;
+        
+      
+      }
+    
+      .comment
+      {
+        margin-left: 15px;
+        font-weight: 400;
+      }
+      
+      .item3
+      {
+        
+      }
+
+      .item4
+      {
+        margin-left: 20px;
+      
+      }
+
+      .item5
+      {
+        margin-left:40px;
+      }
+
+      .user2
+      {
+        margin-top: 110px;
+        
+      }
+
+      .user3
+      {
+        margin-top: 130px;
+      }
+
+      .user
+      {
+        width: 320px;
+      }
+
+      
+
+      .mini-flex-container span
+      {
+        color: hsl(333, 80%, 67%);
+      }
+
+      .name
+      {
+        font-weight: 500;
+      }
+
+      .verified
+      {
+        font-weight: 400;
+      }
+
+      /* Responsiveness of the web page */
+      @media(max-width: 414px)
+      {
+        body
+      {
+        
+        
+        
+        margin: 0;
+        padding: 0;
+        background: top url(./images/bg-pattern-bottom-mobile.svg) ;
+        
+      }
+      .container
+      {
+        display: block;
+        padding-left: 10px;
+        width: 300px;
+        height: 650px;
+        
+        
+        background-image: url(./images/bg-pattern-bottom-desktop.svg);
+        font-family: 'League Spartan', sans-serif;
+      }
+
+      
+
+      .logo
+      {
+        width: 250px;
+        margin-top: -150px;
+        text-align: center;
+      }
+      
+      .description
+      {
+        width: 250px;
+        font-family: 'League Spartan', sans-serif;
+        color: rgb(155,144,155);
+      }
+
+     
+      
+      .item1 h1
+      {
+        color: hsl(300, 43%, 22%);
+        font-family: 'League Spartan', sans-serif;
+        font-weight: 700;
+        
+        
+      }
+
+      .item2
+      {
+        margin-top: -40px;
+        margin-left: 0;
+        
+      }
+      .star-rating
+      {
+        height: 80px;
+        width: 250px;
+        margin-top: 10px;
+        padding-top: 20px;
+        border-radius: 10px;
+        background-color: hsl(300, 24%, 96%);
+        color: hsl(300, 43%, 22%);
+        
+        font-family: 'League Spartan', sans-serif;
+        font-weight: 700;
+        font-size: 20px;
+      }
+
+      .review3
+      {
+        width: 250px;
+        margin-left: 0px;
+      }
+      .rate1
+      {
+        font-size: 17px;
+        display: block;
+        margin-left: -10px;
+        margin-top: 10px;
+      }
+      .rate2
+      {
+        font-size: 17px;
+        display: block;
+        margin-left: -15px;
+        margin-top: 10px;
+      }
+      .rate3
+      {
+        font-size: 17px;
+        display: block;
+        margin-left: -15px;
+        margin-top: 10px;
+      }
+      .review2
+      {
+        width: 250px;
+        margin-left: 0;
+      }
+      
+      .mini-flex-container
+      {
+        display: flex;
+        
+        
+      }
+
+      .mini-flex-container img
+      {
+        margin-right: 10px;
+        border-radius: 50%;
+        padding-left: 15px;
+      }
+      
+
+      .user
+      {
+        margin-top: 50px;
+        background-color:hsl(300, 43%, 22%);
+        height: 220px;
+        color: white;
+        border-radius: 5px;
+        width: 300px;
+      }
+      .attribution {
+        font-size: 11px;
+        margin-left: 300px;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+
+      
+      .mini-flex-container
+      {
+        width: 250px;
+        padding-top: 20px;
+       
+      }
+      .user p
+      {
+        width: 250px;
+        
+      
+      }
+    
+      .comment
+      {
+        margin-left: 15px;
+        font-weight: 400;
+      }
+      
+
+      .item4
+      {
+        margin-left: 0px;
+        width: 250px;
+      }
+
+      .item5
+      {
+        margin-left:0px;
+      }
+
+      .user2
+      {
+        margin-top: 20px;
+        
+      }
+
+      .user3
+      {
+        margin-top: 20px;
+      }
+      
+
+      .mini-flex-container span
+      {
+        color: hsl(333, 80%, 67%);
+      }
+
+      .name
+      {
+        font-weight: 500;
+      }
+
+      .verified
+      {
+        font-weight: 400;
+      }
+
+      svg
+      {
+        text-align: center;
+        width: 30px;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item item1">
+        <div class="logo">
+          <h1>10,000+ of our users love our products.</h1>
+        </div>
+        
+        <div class="description story">
+          <p>We only provide great products combined with excellent customer service.
+            See what our satisfied customers are saying about our services.
+          </p>
+        </div>
+      </div>
+      <div class="item2">
+        <!-- start of star ratings & reviews -->
+        <div class="star-rating review1">
+          <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/>
+          </svg>
+          <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/>
+          </svg>
+          <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/>
+          </svg>
+          <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/>
+          </svg>
+          <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/>
+          </svg>
+          <span class="rate1">Rated 5 Stars in Reviews</span>
+        </div>
+        <div class="star-rating review2">
+          <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/>
+          </svg>
+          <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/>
+          </svg>
+          <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/>
+          </svg>
+          <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/>
+          </svg>
+          <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/>
+          </svg>
+          <span class="rate2">Rated 5 Stars in Report Guru</span>
+        </div>
+        <div class="star-rating review3">
+          <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/>
+          </svg>
+          <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/>
+          </svg>
+          <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/>
+          </svg>
+          <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/>
+          </svg>
+          <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/>
+          </svg>
+          <span class="rate3">Rated 5 Stars in BestTech</span>
+        </div>
+        <!-- End of star ratings & reviews -->
+      </div>
+      <div class="item3">
+        <div class="user user1">
+          <!-- created the image and username layout using flexbox -->
+          <div class="mini-flex-container">
+            <img src="./images/image-colton.jpg" alt="colton">
+            <p class="name">Colton Smith <br><span class="verified">Verified Buyer</span></p>
+
+          </div>
+          <p class="comment">"We needed the same printed design as the one we had ordered a week prior.
+            Not only did they find the original order, but we also received it in time.
+            Excellent!"</p>
+        </div>
+      </div>
+      <div class="item4">
+        <div class="user user2">
+          <div class="mini-flex-container">
+            <img src="./images/image-irene.jpg" alt="irene">
+            <p class="name">Irene Roberts<br><span class="verified">Verified Buyer</span></p>
+          
+          </div>
+          <p class="comment">
+            "Customer service is always excellent and very quick turn around. Completely
+            delighted with the simplicity of the purchase and the speed of delivery."
+          </p>
+        </div>
+      </div>
+      <div class="item5">
+        <div class="user user3">
+          <div class="mini-flex-container">
+            <img src="./images/image-anne.jpg" alt="colton">
+            <p class="name">Anne Wallace <br><span class="verified">Verified Buyer</span></p>
+
+        </div>
+          <p class="comment">"Put an order with this company and can only praise them for the very high
+          standard. Will definitely use them again and recommend them to everyone!"
+          </p>
+      </div>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Kingsley Obiagwu</a>.
+    </div>
+    
+  </body>
+</html>
